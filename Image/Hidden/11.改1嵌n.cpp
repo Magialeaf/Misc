@@ -1,14 +1,8 @@
 ﻿#include<iostream>
 #include<opencv2/opencv.hpp>
-
-const int K = 3, LEN_A = (1 << K) - 1,UNIT = LEN_A * 8;
-/*
 #define K 3
-#define LEN_A (1<<K)-1
-#define UNIT LEN_A * 8
-不能define，不然会算出奇怪的结果
-*/
-
+#define LEN_A ((1<<K)-1) // 加括号，不然会错
+#define UNIT (LEN_A * 8）
 
 using namespace cv;
 using namespace std;
